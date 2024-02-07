@@ -32,7 +32,7 @@ export function CryptoContextProvider({ children }) {
     async function preload() {
       setIsLoading(true);
       const { result } = await fetchCrypto();
-      const assets = await fetchAssets();
+      const assets = fetchAssets();
 
       setCrypto(result);
       setAssets(mapAssets(assets, result));
